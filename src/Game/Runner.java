@@ -1,6 +1,7 @@
 package Game;
 
 import People.Person;
+import Rooms.Mushroom;
 import Rooms.Room;
 import Rooms.WinningRoom;
 
@@ -23,7 +24,11 @@ public class Runner {
 				building[x][y] = new Room(x,y);
 			}
 		}
-		
+
+		int j = (int)(Math.random()*building.length);
+		int k = (int)(Math.random()*building.length);
+		building[j][k] = new Mushroom(j, k);
+
 		//Create a random winning room.
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
